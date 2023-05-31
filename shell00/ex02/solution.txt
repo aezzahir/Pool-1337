@@ -1,0 +1,24 @@
+Modes
+Pour chaque fichier donné, les permissions s'appliquent au propriétaire du fichier (code ’u’ comme user), au groupe d’utilisateurs du fichier (’g’ comme group) ou aux autres utilisateurs (’o’ comme others). Pour appliquer les modifications à tous en une seule fois, on utilise le code ’a’ comme all :
+
+u propriétaire (user)
+g groupe (group)
+o les autres (others)
+a tous (all)
+Les modes peuvent être spécifiés de deux façons, avec des lettres ou avec des nombres en octal. Pour les lettres, il existe les opérateurs de changement d'état + et - pour ajouter ou retirer un type de droit aux droits courants, et l'opérateur = pour les écraser. Pour l'octal, il faut additionner les nombres pour chaque type de possesseur.
+
+Les permissions sont (valeurs octales entre parenthèses) :
+
+r (4) : autorisation de lecture
+w (2) : autorisation d'écriture
+x (1) : autorisation d'exécution. La permission d'exécution régit également l'accès à un répertoire : si l'exécution n'est pas autorisée sur un répertoire, on ne peut faire un chdir (commande cd) sur ce répertoire.
+Correspondances de représentation des droits
+Droit	Valeur alphanumérique	Valeur octale	Valeur binaire
+aucun droit	---	0	000
+exécution seulement	--x	1	001
+écriture seulement	-w-	2	010
+écriture et exécution	-wx	3	011
+lecture seulement	r--	4	100
+lecture et exécution	r-x	5	101
+lecture et écriture	rw-	6	110
+tous les droits (lecture, écriture et exécution)	rwx	7	111
