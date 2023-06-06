@@ -2,7 +2,7 @@ To accomplish the task of finding and deleting files with specific names in the 
 
 shell
 Copy code
-find . \( -name '*~' -o -name '#*#' \) -print -delete
+ $ find . \( -name '*~' -o -name '#*#' \) -print -delete
 Let's break down the command:
 
 find: Initiates the search for files.
